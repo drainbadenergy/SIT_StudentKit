@@ -1,484 +1,164 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
-
+<html lang="en" class="scroll-smooth">
 <head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="Colorlib">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Student Kit</title>
-
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500,600" rel="stylesheet">
-	<!--
-		CSS
-		============================================= -->
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT Pune | Student Kit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for professional theme */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #1f2937; /* Dark Gray text */
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
+<body class="text-gray-800">
 
-<body>
-	<div class="main-wrapper-first">
-		<div class="hero-area relative">
-			<header>
-				<div class="container">
-					<div class="header-wrap">
-						<div class="header-top d-flex justify-content-between align-items-center">
-							<div class="logo">
-								<a href="index.html"><img src="img/sitlogo.png" alt="" width="22%"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<div class="banner-area">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row height align-items-center justify-content-center">
-						<div class="col-lg-7">
-							<div class="banner-content text-center">
-								<h1>Student Kit 2025-26</h1>
-								<br>
-								<br>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-3"><img src="https://placehold.co/40x40/1f2937/ffffff?text=SFC" alt="St. Future's College Logo" class="h-10 w-10"><span class="text-xl font-bold tracking-wider text-gray-800 hover:text-red-600 transition-colors font-heading">SIT Pune</span></a>
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
+            <div class="relative" id="departments-dropdown-container">
+                <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Departments<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                <div id="departments-dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-10">
+                    <a href="chancellor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Director's Message</a><a href="students.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From Our Students</a><a href="creators.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From The Creators</a>
+                </div>
+            </div>
+            <a href="essentials.html" class="text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-800">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t border-gray-200">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Home</a>
+        <div>
+            <button id="mobile-departments-button" class="w-full text-left py-2 text-gray-600 hover:text-red-600 transition-colors flex justify-between items-center">Departments<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            <div id="mobile-departments-menu" class="pl-4 hidden">
+                <a href="chancellor.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Director's Message</a><a href="students.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From Our Students</a><a href="creators.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From The Creators</a>
+            </div>
+        </div>
+        <a href="essentials.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
+    </div>
+</header>
 
-	<div class="main-wrapper">
-		<!-- <section class="newsletter-area pt-100 pb-100">
-						<div class="container">
-							<div class="row justify-content-center align-items-center">
-								<div class="text-center">
-									<h3>Link to <span>Welcome Session Stream</span></h3>
-									<div class="subcribe-form" id="mc_embed_signup">
-										<p>Click the button to check the stream</p>
-										<a href = "https://youtu.be/VV1bQqB5Z3U" target="_blank">
-										<button class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></button></a>
-										<div class="info"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section> -->
-		<!-- Start Feature Area -->
-		<section class="featured-area pt-100 pb-100">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-6">
-						<div class="feature-left">
-							<h2>
-								<span>Life at 
-								SIT Pune</span>
-							</h2>
-							<p>
-								Life at SIT Pune is a mix of academics, innovation, and vibrant student culture set against the scenic backdrop of the Lavale hills,
-								where mornings begin with fresh air and evenings often end with sunsets that make the campus feel like home;
-								days are filled with lectures, labs, and projects balanced by hostel banter, late-night chai, and friendships that last beyond college,
-								while cultural fests, technical events, sports, and clubs keep the energy alive throughout the year,
-								and the city of Pune adds its own flavor with opportunities for internships, a buzzing food and music scene,
-								and just enough urban chaos to balance the calm of campus life.
-							</p>
-							<button class="hover primary-btn d-inline-flex align-items-center"
-								onclick="smoothScroll(document.getElementById('shift1'))"><span
-									class="mr-10">Next</span><span class="lnr lnr-arrow-right"></span></button>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="feature-right active-feature-carousel">
+<main>
+    <section id="home">
+        <div class="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gray-50 pt-16 relative overflow-hidden">
 
-							<div class="single-slider item">
-								<img src="img/ogp.png" alt="">
-							</div>
-							<div class="single-slider item">
-								<img src="img/surya.png" alt="">
-							</div>
-							<div class="single-slider item">
-								<img src="img/bike.jpg" alt="">
-							</div>
-						
-						
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Feature Area -->
-		<!-- Start parallux Area -->
-		<section class="parallux-area pt-100 pb-100 relative" data-parallax="scroll"
-			data-image-src="img/acad.jpg">
-			<div id="shift1"></div>
-			<div class="overlay overlay-bg"></div>
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-lg-5 col-md-6 col-sm-12">
-						<h2>
-							<br>
-							<span>Academics</span>
-						</h2>
-						<p>
-							Academics at SIT Pune blend strong theory with practical learning through industry-oriented curricula,
-							modern labs, and project-based assignments. With experienced faculty, workshops, guest lectures, and collaborations with companies
-							and research bodies, learning stays relevant to real-world challenges. Hackathons, internships, and interdisciplinary projects further
-							push students to innovate and apply their skills, making academics both rigorous and engaging.
-						</p>
-						<a onclick="smoothScroll(document.getElementById('shift2'))"
-							class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Next</span><span
-								class="lnr lnr-arrow-right"></span></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="featured-area pt-100 pb-100">
-			<div id="shift2"></div>
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-6">
-						<div class="feature-left">
-							<h2>
-								<span>Campus and Hostel</span>
-							</h2>
-							<p>
-								Campus and Hostel at SIT Pune offer a balance of comfort, community, and natural beauty,
-								with the hilltop campus surrounded by greenery and equipped with modern classrooms, labs, libraries, and sports facilities that create an environment both academic and lively;
-								the hostels are designed to foster friendships and student life, where evenings are filled with group studies, late-night conversations, and shared meals, while common areas,
-								recreational spaces, and the blend of cultures among students make hostel living not just convenient but also one of the most memorable parts of the SIT experience.
-							</p>
-							<button onclick="smoothScroll(document.getElementById('shift3'))"
-								class="primary-btn hover d-inline-flex align-items-center"><span
-									class="mr-10">Next</span><span class="lnr lnr-arrow-right"></span></button>
-						</div>
-					</div>					<div class="col-md-6">
-						<div class="feature-right active-feature-carousel">
-							<div class="single-slider item">
-								<img src="img/image54.jpeg" alt="" style="width: 100%; height: 30vh; min-height: 250px; max-height: 400px; object-fit: cover; margin: 0 auto; display: block;">
-							</div>
-							<div class="single-slider item">
-								<img src="img/cl.png" alt="" style="width: 100%; height: 30vh; min-height: 250px; max-height: 400px; object-fit: cover; margin: 0 auto; display: block;">
-							</div>
-							<div class="single-slider item">
-								<img src="img/iiit-2.jpeg" alt="" style="width: 100%; height: 30vh; min-height: 250px; max-height: 400px; object-fit: cover; margin: 0 auto; display: block;">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="parallux-area pt-100 pb-100 relative" data-parallax="scroll" data-image-src="img/sms.png">
-			<div id="shift3"></div>
-			<div class="overlay overlay-bg"></div>
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-lg-5 col-md-6 col-sm-12">
-						<h2>
-							<br>
-							<span>Clubs</span>
-						</h2>
-						<p>
-							At Symbiosis Institute of Technology, student life goes beyond academics with a vibrant mix of clubs and societies.
-							From cultural groups like the Music Society, Dance Troupe, and Drama Club to creative spaces for literature, art, and photography, students get ample opportunities to showcase their talents.
-							Technical and departmental societies such as IEEE, Google Club, MESA, and CESS nurture innovation and professional growth, while forums like the Literary Society, MUN Club, and TED Club encourage leadership, communication, and critical thinking.
-							Together, these clubs create a lively and engaging campus environment.
-						</p>
-						<div style="display: flex; gap: 16px; flex-wrap: wrap;">
-							<a href="https://www.sitpune.edu.in/student-club" class="primary-btn d-inline-flex align-items-center">
-							  <span class="mr-10">Clubs</span>
-							  <span class="lnr lnr-arrow-right"></span>
-							</a>
-						  </div>
-						  
-						<!-- <a onclick="smoothScroll(document.getElementById('shift'))"
-							class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Next</span><span
-								class="lnr lnr-arrow-right"></span></a> -->
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                <source src="img/SIT.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End parallax Area -->
-		<!-- Start service Area -->
-		<section class="service-area">
-			<div id="shift"></div>
-			<div class="container">
-				<h1> The Kit (click to know more) </h1>
-				<div class="row">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
 
-					<div class="col-md-4">
-						<a href="./director_letter.html">
-							<div class="single-service" style="background: url(img/gallery/t3.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Letter from Director</h4>
-									<p>
-										Here's what the Director has to say to you.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="./sac_letter.html">
-							<div class="single-service" style="background: url(img/sac_letter.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Letter from SAC</h4>
-									<p>
-										A warm welcome from the Student Affairs Committee (SAC) of IIIT Hyderabad.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
+            <div class="relative z-20 text-white">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4">
+                    Welcome to SIT Pune
+                </h1>
+                <p class="text-xl md:text-2xl max-w-3xl">
+                    Shaping the innovators of tomorrow, today.
+                </p>
+            </div>
+        </div>
 
-										<div class="col-md-4">
-						<a href="./slc_letter.html">
-							<div class="single-service" style="background: url(img/gallery/t1.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Letter from the Chair - Students Life Committee</h4>
-									<p>
-										The SLC is the head of all activites related to student life on campus. Have a
-										look at what SLC has to say to you!
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
+        <div id="departments-preview" class="bg-white py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Words From Our Leaders</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="chancellor.html" class="group block bg-white border border-gray-200 rounded-lg p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl hover:border-red-500">
+                        <div class="text-5xl mb-4 text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">Chancellor's Message</h3>
+                        <p class="text-gray-600">A vision for the future of education.</p>
+                    </a>
+                    <a href="director.html" class="group block bg-white border border-gray-200 rounded-lg p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl hover:border-red-500">
+                        <div class="text-5xl mb-4 text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v11.494m-9-5.747h18" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">Director's Message</h3>
+                        <p class="text-gray-600">Guiding our academic excellence.</p>
+                    </a>
+                    <a href="students.html" class="group block bg-white border border-gray-200 rounded-lg p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl hover:border-red-500">
+                        <div class="text-5xl mb-4 text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">From Our Students</h3>
+                        <p class="text-gray-600">Voices of our vibrant community.</p>
+                    </a>
+                    <a href="creators.html" class="group block bg-white border border-gray-200 rounded-lg p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl hover:border-red-500">
+                        <div class="text-5xl mb-4 text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">From The Creators</h3>
+                        <p class="text-gray-600">The story behind this project.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-					<div class="col-md-4">
-						<a href="./apex_letter.html">
-							<div class="single-service" style="background: url(img/apex-24.jpg);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Letter from Apex Body</h4>
-									<p>
-										A hearty welcome from the Apex!
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
+<footer class="bg-gray-100 text-gray-600 py-8 px-4 border-t border-gray-200">
+    <div class="container mx-auto text-center">
+        <div class="flex justify-center items-center space-x-4 mb-2">
+            <footer class="footer-area relative">
+                <div class="contain
+                        <div class="footer-content d-flex flex-column align-items-center">
+                <div class="footer-menu">
+                    <a href="https://www.linkedin.com/school/sitpune.edu.in/">LinkedIn  </a>
+                    <a href="index.html">Home  </a>
+                    <a href="index.html#shift">The Kit  </a>
+                    <a href="https://www.sitpune.edu.in/">SIT-P  </a>
+                </div>
+                <div class="copy-right-text">Student Kit 2025 | Created With Love ❤️ Harman Ayush Jalaj Gauri </div>
+        </div>
+    </div>
+</footer>
+</footer>
 
-					<div class="col-md-4">
-						<a href="./gsc_letter.html">
-							<div class="single-service" style="background: url(img/gsc_letter.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Letter from Gender Sensitisation Committee</h4>
-									<p>
-										
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
 
-					<div class="col-md-4">
-						<a href="./mh_letter.html">
-							<div class="single-service" style="background: url(img/mh.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Letter from Mental Heatlh Team</h4>
-									<p>
-									Mental health is a priority at IIIT Hyderabad. Here's what the Mental Health Team has to say.		
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
+        // Desktop dropdown toggle (on click)
+        const dropdownButton = document.getElementById('departments-dropdown-button');
+        const dropdownMenu = document.getElementById('departments-dropdown-menu');
+        if (dropdownButton && dropdownMenu) {
+            dropdownButton.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevents the document click listener from firing immediately
+                dropdownMenu.classList.toggle('hidden');
+            });
+        }
 
+        // Mobile departments dropdown toggle
+        const mobileDropdownButton = document.getElementById('mobile-departments-button');
+        const mobileDropdownMenu = document.getElementById('mobile-departments-menu');
+        if (mobileDropdownButton && mobileDropdownMenu) {
+            mobileDropdownButton.addEventListener('click', () => mobileDropdownMenu.classList.toggle('hidden'));
+        }
 
-
-
-						<div class="col-md-4">
-							<a href="./induction_schedule.html">
-								<div class="single-service" style="background: url(img/gallery/t4.png);">
-
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Induction Schedule</h4>
-									<p>
-										We've worked hard to build an exciting first few weeks for you.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-						<a href="./documents_required.html">
-							<div class="single-service" style="background: url(img/gallery/t2.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Documents and Items Required</h4>
-									<p>
-										All you need to bring to SIT-P on your first visit.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-						<a href="./laptop_specs.html">
-							<div class="single-service" style="background: url(img/gallery/t12.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Recommended Laptop Configuration</h4>
-									<p>
-
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-						<a href="./how_to_reach.html">
-							<div class="single-service" style="background: url(img/gallery/t8.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">How to reach SIT-P</h4>
-									<p>
-										We'll help you every step of the way.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-					<a href="./hotels.html">
-							<div class="single-service" style="background: url(img/gallery/t7.png);">
-								<div class="overlay overlay-content p-4">
-									<h4 class="text-uppercase">Hotels near SIT-P</h4>
-									<p>
-										We understand that finding a place to stay is not always easy. Don't worry we're
-										here to help.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-						<a href="./places_to_visit.html">
-							<div class="single-service" style="background: url(img/gallery/t9.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Places to visit</h4>
-									<p>
-										Punw is a fun place.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-						<a href="./informal_brochure.html">
-							<div class="single-service" style="background: url(img/gallery/t10.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Informal Brochure</h4>
-									<p>
-										An informal introduction to our college.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4">
-						<a href="./gallery.html">
-							<div class="single-service" style="background: url(img/gallery/t11.png);">
-								<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Gallery</h4>
-									<p>
-										Look at some of your seniors' memories.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>					<div class="col-md-4">
-						<a href="./echoes.html">
-							<div class="single-service" style="background: url(img/gallery/t6.png);">
-							<div class="overlay overlay-content">
-									<h4 class="text-uppercase">Echoes</h4>
-									<p>
-										Experiences of students.
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-
-
-				</div>
-			</div>
-		</section>
-		<!-- End service Area -->
-		<!-- Start footer Area -->
-		<footer class="footer-area relative">
-			<div class="container">
-				<div class="footer-content d-flex flex-column align-items-center">
-					<div class="footer-menu">
-						<a href="https://www.linkedin.com/school/sitpune.edu.in/">LinkedIn</a>
-						<a href="index.html">Home</a>
-						<a href="index.html#shift">The Kit</a>
-						<a href="https://www.sitpune.edu.in/">SIT-P</a>
-					</div>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					<div class="copy-right-text">Student Kit 2025 | Created With Love ❤️ Ayush Harman Jalaj Gauri </div>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</div>
-			</div>
-		</footer>
-		<!-- End footer Area -->
-	</div>
-
-	<script>
-		window.smoothScroll = function (target) {
-			var scrollContainer = target;
-			do { //find scroll container
-				scrollContainer = scrollContainer.parentNode;
-				if (!scrollContainer) return;
-				scrollContainer.scrollTop += 1;
-			} while (scrollContainer.scrollTop == 0);
-
-			var targetY = 0;
-			do { //find the top of target relatively to the container
-				if (target == scrollContainer) break;
-				targetY += target.offsetTop;
-			} while (target = target.offsetParent);
-
-			scroll = function (c, a, b, i) {
-				i++; if (i > 30) return;
-				c.scrollTop = a + (b - a) / 30 * i;
-				setTimeout(function () { scroll(c, a, b, i); }, 10);
-			}
-			// start scrolling
-			scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-		}
-	</script>
-
-	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-		crossorigin="anonymous"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/parallax.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
+        // Close desktop dropdown when clicking anywhere else on the page
+        document.addEventListener('click', function() {
+            if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
 </body>
-
 </html>
