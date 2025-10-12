@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments | St. Future's College</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins (Headings) & Lato (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for professional theme */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- HEADER -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3"><img src="img/Sit logo no bg.png" alt="SIT Logo" class="h-10 w-30"><span class="text-xl font-bold tracking-wider text-gray-800 hover:text-red-600 transition-colors font-heading">Symbiosis Institute Of Technology</span></a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
+                <div class="relative" id="departments-dropdown-container">
+                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Departments<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="departments-dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-10">
+                        <a href="chancellor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Director's Message</a><a href="students.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From Our Students</a><a href="creators.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From The Creators</a>
+                    </div>
+                </div>
+                <a href="essentials.html" class="text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-800">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t border-gray-200">
+             <a href="index.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Home</a>
+             <div>
+                <button id="mobile-departments-button" class="w-full text-left py-2 text-gray-600 hover:text-red-600 transition-colors flex justify-between items-center">Departments<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                <div id="mobile-departments-menu" class="pl-4 hidden">
+                    <a href="chancellor.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Director's Message</a><a href="students.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From Our Students</a><a href="creators.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From The Creators</a>
+                </div>
+             </div>
+             <a href="essentials.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
+        </div>
+    </header>
+    <main class="pt-24">
+        <!-- DEPARTMENT 01 MESSAGE PAGE -->
+        <section id="dept1" class="bg-gray-50 flex items-center justify-center py-20 px-4">
+            <div class="container mx-auto max-w-4xl bg-white rounded-xl border border-gray-200 shadow-xl p-8 md:p-12 text-center">
+                <h2 class="text-4xl font-bold text-red-600 mb-2">Message from Department 01</h2>
+                <p class="text-xl font-medium text-gray-700 mb-8 font-heading">Computer Science</p>
+                <div class="text-left text-lg text-gray-600 space-y-4 leading-relaxed">
+                    <p>Welcome to the Department of Computer Science. Our commitment is to provide an environment that encourages intellectual growth and personal development. We believe in fostering a community of learners who are not only academically proficient but also socially responsible.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. We are proud of our legacy and excited for the future we are building together.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPARTMENT 02 MESSAGE PAGE -->
+        <section id="dept2" class="bg-white flex items-center justify-center py-20 px-4">
+            <div class="container mx-auto max-w-4xl bg-white rounded-xl border border-gray-200 shadow-xl p-8 md:p-12 text-center">
+                <h2 class="text-4xl font-bold text-red-600 mb-2">Message from Department 02</h2>
+                <p class="text-xl font-medium text-gray-700 mb-8 font-heading">Mechanical Engineering</p>
+                <div class="text-left text-lg text-gray-600 space-y-4 leading-relaxed">
+                    <p>In the Department of Mechanical Engineering, we are dedicated to pushing the boundaries of technology. Our curriculum is designed to equip students with the skills needed to excel in a rapidly evolving digital world. We emphasize hands-on projects, collaborative research, and real-world problem-solving.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Join us to be a part of the next wave of technological innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPARTMENT 03 MESSAGE PAGE -->
+        <section id="dept3" class="bg-gray-50 flex items-center justify-center py-20 px-4">
+            <div class="container mx-auto max-w-4xl bg-white rounded-xl border border-gray-200 shadow-xl p-8 md:p-12 text-center">
+                <h2 class="text-4xl font-bold text-red-600 mb-2">Message from Department 03</h2>
+                <p class="text-xl font-medium text-gray-700 mb-8 font-heading">Business Administration</p>
+                <div class="text-left text-lg text-gray-600 space-y-4 leading-relaxed">
+                    <p>On behalf of the Department of Business Administration, I extend a warm welcome to all students. Our goal is to create a vibrant and inclusive campus life where every student feels heard, supported, and engaged. We organize events, clubs, and initiatives to enrich your college experience.</p>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. We encourage you to get involved, share your ideas, and help us make St. Future's College an even better place for everyone. Your voice matters, and together, we can achieve great things.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DEPARTMENT 04 MESSAGE PAGE -->
+        <section id="dept4" class="bg-white flex items-center justify-center py-20 px-4">
+            <div class="container mx-auto max-w-4xl bg-white rounded-xl border border-gray-200 shadow-xl p-8 md:p-12 text-center">
+                <h2 class="text-4xl font-bold text-red-600 mb-2">Message from Department 04</h2>
+                <p class="text-xl font-medium text-gray-700 mb-8 font-heading">Arts & Humanities</p>
+                <div class="text-left text-lg text-gray-600 space-y-4 leading-relaxed">
+                   <p>The Arts & Humanities department was transformative for many. The lessons learned, both inside and outside the classroom, laid the foundation for my career. The faculty's dedication and the friendships I made have been invaluable throughout my journey.</p>
+                   <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? To the current students, I say this: embrace every opportunity, challenge yourselves, and never stop learning. The skills and connections you build here will serve you for a lifetime.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100 text-gray-600 py-8 px-4 border-t border-gray-200">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center items-center space-x-4 mb-2">
+                 <p>&copy; 2024 St. Future's College. All Rights Reserved.</p>
+                 <span>&bull;</span>
+                 <a href="about.us.html" class="hover:text-red-600 transition-colors">About Us</a>
+            </div>
+            <p>123 University Lane, Knowledge City, 45678</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
