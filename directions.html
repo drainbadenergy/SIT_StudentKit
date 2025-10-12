@@ -4,74 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directions | SIT Pune</title>
+    <link rel="icon" type="" href="img/favicon.ico">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        /* Custom styles to ensure consistency */
+        body { font-family: 'Lato', sans-serif; }
+        .font-heading { font-family: 'Poppins', sans-serif; }
+        /* Style for the map iframe to be responsive */
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .map-container {
+            position: relative;
+            padding-bottom: 75%; /* 4:3 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body>
-    
-    <header id="navbar" class="site-header">
-        <div class="header-container">
-            <a href="index.html" class="logo-link">
-                <img src="img/Sit logo no bg.png" alt="college logo" class="logo-image">
-                <span class="logo-text">Symbiosis Institute Of Technology Pune</span>
+<body class="text-gray-800 bg-gray-50">
+
+    <!-- HEADER: This is now consistent with your main page -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="img/Sit logo no bg.png" alt="college logo" class="h-10 w-auto">
+                <span class="text-xl font-bold tracking-wider text-gray-800 hover:text-red-600 transition-colors font-heading">Symbiosis Institute Of Technology</span>
             </a>
-            <nav class="main-navigation">
-                <a href="index.html" class="nav-link">Home</a>
-                <div class="dropdown-container" id="departments-dropdown-container">
-                    <button id="departments-dropdown-button" class="nav-link dropdown-toggle">
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
+                <div class="relative" id="departments-dropdown-container">
+                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">
                         Messages
-                        <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div id="departments-dropdown-menu" class="dropdown-menu">
-                        <a href="chancellor.html" class="dropdown-item">Chancellor's Message</a>
-                        <a href="director.html" class="dropdown-item">Director's Message</a>
-                        <a href="students.html" class="dropdown-item">From Our Students</a>
-                        <a href="creators.html" class="dropdown-item">From The Creators</a>
+                    <div id="departments-dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-10">
+                        <a href="chancellor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Chancellor's Message</a>
+                        <a href="director.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Director's Message</a>
+                        <a href="students.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From Our Students</a>
+                        <a href="creators.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From The Creators</a>
                     </div>
                 </div>
-                <a href="essentials.html" class="nav-link">Student Essentials</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="directions.html" class="nav-link">Directions</a>
-                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="essentials.html" class="text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a>
+                <a href="gallery.html" class="text-gray-600 hover:text-red-600 transition-colors">Gallery</a>
+                <a href="directions.html" class="text-gray-600 hover:text-red-600 transition-colors">Directions</a>
+                <a href="contact.html" class="text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
             </nav>
-            <button id="mobile-menu-button" class="mobile-menu-toggle">☰</button>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-800">☰</button>
         </div>
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="index.html" class="mobile-nav-link">Home</a>
-            <div class="mobile-dropdown-container">
-                <button id="mobile-departments-button" class="mobile-nav-link mobile-dropdown-toggle">
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t border-gray-200">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Home</a>
+            <div>
+                <button id="mobile-departments-button" class="w-full text-left py-2 text-gray-600 hover:text-red-600 transition-colors flex justify-between items-center">
                     <span>Messages</span>
-                    <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
-                <div id="mobile-departments-menu" class="mobile-dropdown-menu">
-                    <a href="chancellor.html" class="mobile-dropdown-item">Chancellor's Message</a>
-                    <a href="director.html" class="mobile-dropdown-item">Director's Message</a>
-                    <a href="students.html" class="mobile-dropdown-item">From Our Students</a>
-                    <a href="creators.html" class="mobile-dropdown-item">From The Creators</a>
+                <div id="mobile-departments-menu" class="pl-4 hidden">
+                    <a href="chancellor.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Chancellor's Message</a>
+                    <a href="director.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Director's Message</a>
+                    <a href="students.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From Our Students</a>
+                    <a href="creators.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From The Creators</a>
                 </div>
             </div>
-            <a href="essentials.html" class="mobile-nav-link">Student Essentials</a>
-            <a href="gallery.html" class="mobile-nav-link">Gallery</a>
-            <a href="directions.html" class="mobile-nav-link">Directions</a>
-            <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            <a href="essentials.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a>
+            <a href="gallery.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Gallery</a>
+            <a href="directions.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Directions</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
         </div>
     </header>
 
-    <main class="page-main">
-        <section class="directions-section">
-            <div class="container text-center">
-                <h1 class="directions-title">Find Your Way to Us</h1>
-                <div class="map-card">
-                    <div class="map-container">
-                        <div class="map-embed-container">
+    <main class="pt-24">
+        <section class="py-16 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <h1 class="text-4xl font-bold text-center text-gray-900 font-heading mb-12">Find Your Way to Us</h1>
+                
+                <!-- Main layout container for map and address -->
+                <div class="bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden md:flex">
+                    
+                    <!-- Map Container -->
+                    <div class="w-full md:w-3/5">
+                         <div class="map-container">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.937742188486!2d73.73155381540396!3d18.53180498740263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bc3e3d28683b%3A0x64a3e9ef22f676a0!2sSymbiosis%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1628853942493!5m2!1sen!2sin" 
-                                width="600" 
-                                height="450" 
                                 style="border:0;" 
                                 allowfullscreen="" 
                                 loading="lazy"
@@ -79,11 +103,19 @@
                             </iframe>
                         </div>
                     </div>
-                    <div class="address-container">
-                        <p class="address-text">
-                            Symbiosis Institute of Technology, Symbiosis International University, Near Lupin Research Park, Gram: Lavale, Mulshi, Pune 412115, Maharashtra, India
+
+                    <!-- Address Container -->
+                    <div class="w-full md:w-2/5 p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold text-red-600 font-heading mb-4">Our Address</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Symbiosis Institute of Technology,<br>
+                            Symbiosis International University,<br>
+                            Near Lupin Research Park,<br>
+                            Gram: Lavale, Mulshi,<br>
+                            Pune 412115, Maharashtra, India
                         </p>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -92,49 +124,17 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-menu">
-                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">LinkedIn</a>
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.us.html" class="footer-link">About Us</a>
-                <a href="https://www.sitpune.edu.in/" class="footer-link">SIT-P</a>
+                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">|     LinkedIn     |</a>
+                <a href="index.html" class="footer-link">|     Home     |</a>
+                <a href="https://www.sitpune.edu.in/" class="footer-link">|     SIT-P     |</a>
+                <a href="about.us.html" class="footer-link">|     About Us     |</a>
             </div>
-            <div class="copyright-text">Student Kit 2025 | Created With Love ❤️ Harman Ayush Jalaj Gauri</div>
+            <div class="copyright-text">
+                Student Kit 2025 | Created With Love ❤️ Harman Ayush Jalaj Gauri
+            </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Mobile Menu Toggle ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('is-active'));
-            }
-    
-            // --- Desktop Dropdown Toggle ---
-            const dropdownButton = document.getElementById('departments-dropdown-button');
-            const dropdownMenu = document.getElementById('departments-dropdown-menu');
-            if (dropdownButton && dropdownMenu) {
-                dropdownButton.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    dropdownMenu.classList.toggle('is-active');
-                });
-            }
-    
-            // --- Mobile Departments Dropdown Toggle ---
-            const mobileDropdownButton = document.getElementById('mobile-departments-button');
-            const mobileDropdownMenu = document.getElementById('mobile-departments-menu');
-            if (mobileDropdownButton && mobileDropdownMenu) {
-                mobileDropdownButton.addEventListener('click', () => mobileDropdownMenu.classList.toggle('is-active'));
-            }
-    
-            // --- Close Desktop Dropdown on Outside Click ---
-            document.addEventListener('click', function() {
-                if (dropdownMenu && dropdownMenu.classList.contains('is-active')) {
-                    dropdownMenu.classList.remove('is-active');
-                }
-            });
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
 

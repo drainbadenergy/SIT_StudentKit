@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | St. Future's College</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gallery</title>
+    <link rel="icon" type="" href="img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Lato', sans-serif; background-color: #ffffff; color: #1f2937; }
         h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
     </style>
+    
+    <link href="footer.css" rel="stylesheet">
 </head>
 <body class="text-gray-800">
     <!-- HEADER -->
@@ -21,7 +24,7 @@
             <nav class="hidden md:flex items-center space-x-6">
                 <a href="index.html" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
                 <div class="relative" id="departments-dropdown-container">
-                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Departments<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Messages<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
                     <div id="departments-dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-10">
                         <a href="chancellor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Director's Message</a><a href="students.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From Our Students</a><a href="creators.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From The Creators</a>
                     </div>
@@ -41,94 +44,7 @@
              <a href="essentials.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
         </div>
     </header>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            }
-
-            // Desktop dropdown toggle (on click)
-            const dropdownButton = document.getElementById('departments-dropdown-button');
-            const dropdownMenu = document.getElementById('departments-dropdown-menu');
-            if (dropdownButton && dropdownMenu) {
-                dropdownButton.addEventListener('click', function(event) {
-                    event.stopPropagation(); // Prevents the document click listener from firing immediately
-                    dropdownMenu.classList.toggle('hidden');
-                });
-            }
-
-            // Mobile departments dropdown toggle
-            const mobileDropdownButton = document.getElementById('mobile-departments-button');
-            const mobileDropdownMenu = document.getElementById('mobile-departments-menu');
-            if (mobileDropdownButton && mobileDropdownMenu) {
-                mobileDropdownButton.addEventListener('click', () => mobileDropdownMenu.classList.toggle('hidden'));
-            }
-
-            // Close desktop dropdown when clicking anywhere else on the page
-            document.addEventListener('click', function() {
-                if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
-                    dropdownMenu.classList.add('hidden');
-                }
-            });
-
-            // --- Gallery-specific scripts (carousel, lightbox) ---
-            // Carousel script
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            let currentItem = 0;
-            const totalItems = carouselItems.length;
-
-            function showItem(index) {
-                carouselItems.forEach((item, i) => {
-                    item.classList.toggle('opacity-0', i !== index);
-                });
-            }
-
-            document.getElementById('next-btn').addEventListener('click', () => {
-                currentItem = (currentItem + 1) % totalItems;
-                showItem(currentItem);
-            });
-
-            document.getElementById('prev-btn').addEventListener('click', () => {
-                currentItem = (currentItem - 1 + totalItems) % totalItems;
-                showItem(currentItem);
-            });
-            
-            // Auto-play carousel
-            setInterval(() => {
-                document.getElementById('next-btn').click();
-            }, 5000);
-
-            // Lightbox script
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxClose = document.getElementById('lightbox-close');
-            const gridImages = document.querySelectorAll('#photo-grid .group');
-
-            gridImages.forEach(item => {
-                item.addEventListener('click', () => {
-                    const imgSrc = item.querySelector('img').src;
-                    lightboxImage.src = imgSrc;
-                    lightbox.classList.remove('hidden');
-                });
-            });
-
-            if (lightboxClose) {
-                lightboxClose.addEventListener('click', () => {
-                    lightbox.classList.add('hidden');
-                });
-            }
-            if (lightbox) {
-                 lightbox.addEventListener('click', (e) => {
-                    if (e.target === lightbox) {
-                        lightbox.classList.add('hidden');
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="gallery.js"> </script>
 
     <main class="bg-white pt-24">
         <section class="container mx-auto py-16 px-4">
@@ -139,13 +55,25 @@
                 <div id="carousel-inner" class="relative w-full overflow-hidden rounded-lg" style="height: 80vh;">
                     <!-- Carousel items -->
                     <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out">
-                        <img src="https://placehold.co/1200x800/ef4444/ffffff?text=Graduation+Day" class="w-full h-full object-cover" alt="Graduation ceremony">
+                        <img src="img/baner/1.png" class="w-full h-full object-cover" alt="">
                     </div>
                     <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
-                        <img src="https://placehold.co/1200x800/3b82f6/ffffff?text=Science+Fair" class="w-full h-full object-cover" alt="Students at science fair">
+                        <img src="img/baner/3.png" class="w-full h-full object-cover" alt="">
                     </div>
                     <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
-                        <img src="https://placehold.co/1200x800/10b981/ffffff?text=Sports+Meet" class="w-full h-full object-cover" alt="Annual sports meet">
+                        <img src="img/baner/5.png" class="w-full h-full object-cover" alt="">
+                    </div>
+
+                    <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+                        <img src="img/baner/2.png" class="w-full h-full object-cover" alt="">
+                    </div>
+
+                    <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+                        <img src="img/baner/4.png" class="w-full h-full object-cover" alt="">
+                    </div>
+
+                    <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+                        <img src="img/baner/6.png" class="w-full h-full object-cover" alt="">
                     </div>
                 </div>
                 <!-- Prev/Next buttons -->
@@ -157,21 +85,21 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-10 font-heading">A Glimpse of Our Life</h2>
             <div id="photo-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 <!-- Repeat this block for each photo -->
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+1" alt="Gallery image 1" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 1</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+2" alt="Gallery image 2" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 2</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+3" alt="Gallery image 3" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 3</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+4" alt="Gallery image 4" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 4</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+5" alt="Gallery image 5" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 5</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+6" alt="Gallery image 6" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 6</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+7" alt="Gallery image 7" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 7</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+8" alt="Gallery image 8" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 8</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+9" alt="Gallery image 9" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 9</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+10" alt="Gallery image 10" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 10</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+11" alt="Gallery image 11" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 11</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+12" alt="Gallery image 12" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 12</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+13" alt="Gallery image 13" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 13</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+14" alt="Gallery image 14" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 14</p></div>
-                <div class="group cursor-pointer"><img src="https://placehold.co/400x400/cccccc/1f2937?text=Event+15" alt="Gallery image 15" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"><p class="text-center text-gray-600 mt-2 text-sm">Caption for image 15</p></div>
+                <div class="group cursor-pointer"><img src="img/1.png" alt="Gallery image 1" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/18.png" alt="Gallery image 2" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/16.png" alt="Gallery image 3" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/4.png" alt="Gallery image 4" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300">></div>
+                <div class="group cursor-pointer"><img src="img/5.png" alt="Gallery image 5" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/6.png" alt="Gallery image 6" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/7.png" alt="Gallery image 7" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/8.png" alt="Gallery image 8" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/9.png" alt="Gallery image 9" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/10.png" alt="Gallery image 10" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/11.png" alt="Gallery image 11" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/12.png" alt="Gallery image 12" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/17.png" alt="Gallery image 13" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/14.png" alt="Gallery image 14" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
+                <div class="group cursor-pointer"><img src="img/15.png" alt="Gallery image 15" class="w-full h-auto object-cover rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"></div>
             </div>
         </section>
     </main>
@@ -186,10 +114,10 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-menu">
-                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">LinkedIn</a>
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="https://www.sitpune.edu.in/" class="footer-link">SIT-P</a>
-                <a href="about.us.html" class="footer-link">About Us</a>
+                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">|     LinkedIn     |</a>
+                <a href="index.html" class="footer-link">|     Home     |</a>
+                <a href="https://www.sitpune.edu.in/" class="footer-link">|     SIT-P     |</a>
+                <a href="about.us.html" class="footer-link">|     About Us     |</a>
             </div>
             <div class="copyright-text">
                 Student Kit 2025 | Created With Love ❤️ Harman Ayush Jalaj Gauri
