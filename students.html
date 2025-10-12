@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>From Our Students | St. Future's College</title>
+    <title>From Our Students</title>
+    <link rel="icon" type="" href="img/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
     <style>
         body { font-family: 'Lato', sans-serif; background-color: #ffffff; color: #1f2937; }
         h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
@@ -21,7 +23,7 @@
             <nav class="hidden md:flex items-center space-x-6">
                 <a href="index.html" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
                 <div class="relative" id="departments-dropdown-container">
-                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Departments<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Messages<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
                     <div id="departments-dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-10">
                         <a href="chancellor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Director's Message</a><a href="students.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From Our Students</a><a href="creators.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From The Creators</a>
                     </div>
@@ -45,18 +47,22 @@
     <main class="bg-gray-50 pt-24">
         <section class="py-20 px-4">
             <div class="container mx-auto max-w-4xl bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden">
-                <img src="img/student.JPG" alt="Message from the Students" class="w-full h-64 object-cover">
+                <img src="img/students.jpg" alt="Message from the Students" class="w-full h-64 object-cover">
                 <div class="p-8 md:p-12">
                     <h1 class="text-4xl font-bold text-red-600 mb-4 text-center font-heading">From the Heart of Our Community</h1>
                     <div class="text-left text-lg text-gray-700 space-y-6 leading-relaxed mt-8">
                         <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"If you’re reading this, all I have to say is, this is your time to try everything. Do whatever you want to, make mistakes, learn, and grow. But remember to respect others, show up for them, and never lose your values.
                             College is about growing up while still nurturing your inner child. All the best for all your endeavors." - Mitiksha Paliwal, Third Year Student</blockquote>
+                        
                         <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"Dear juniors,
                             Welcome to SIT! As you embark on this new journey, remember that college is not just about academics — it’s about growth, friendships, and finding your own path. Make the most of every opportunity, stay curious, and never hesitate to reach out for guidance. Wishing you a wonderful and fulfilling year ahead!" -Twinkle, First Year Student</blockquote>
+                        <br>
                         <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"As your future favorite senior who’s had an amazing run here, here’s my two cents: Put yourself out there, sign up for everything, say yes to more than you think you can handle and you’ll surprise yourself. Also don’t waste college playing a bunch of alter egos; your best insufferable self is more than enough." -Nimita Jestin, Third Year Student</blockquote>
+                        <br>
                         <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"Hey juniors, welcome! College is this wild mix of chaos and magic... you’ll laugh till you cry, stress over deadlines, and still call it the best time of your life. Don’t wait for the ‘right time’ to start something; every random idea and small step counts. Make friends who push you to be better, learn from the people around you, and most importantly, enjoy the journey without comparing it to anyone else’s. You’re not just here to earn a degree ...you’re here to build stories worth remembering" -Mishti Kinker, Second Year Student</blockquote>
-                   <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">" Welcome to the Symbiosis family!
-                       dream big, stay curious, and make every moment count "- Jay Vyanel Fadonougbo, Third Year Student</blockquote>
+                        <br>
+                        <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"Welcome to the Symbiosis family! Dream Big, Stay Curious, and make every moment count. "  - Jay Vyanel Fadonougbo, Third Year Student</blockquote>
+                        <br>
                     </div>
                 </div>
             </div>
@@ -67,50 +73,17 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-menu">
-                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">LinkedIn</a>
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="https://www.sitpune.edu.in/" class="footer-link">SIT-P</a>
-                <a href="about.us.html" class="footer-link">About Us</a>
+                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">|     LinkedIn     |</a>
+                <a href="index.html" class="footer-link">|     Home     |</a>
+                <a href="https://www.sitpune.edu.in/" class="footer-link">|     SIT-P     |</a>
+                <a href="about.us.html" class="footer-link">|     About Us     |</a>
             </div>
             <div class="copyright-text">
                 Student Kit 2025 | Created With Love ❤️ Harman Ayush Jalaj Gauri
             </div>
         </div>
     </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        }
-
-        // Desktop dropdown toggle (on click)
-        const dropdownButton = document.getElementById('departments-dropdown-button');
-        const dropdownMenu = document.getElementById('departments-dropdown-menu');
-        if (dropdownButton && dropdownMenu) {
-            dropdownButton.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevents the document click listener from firing immediately
-                dropdownMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Mobile departments dropdown toggle
-        const mobileDropdownButton = document.getElementById('mobile-departments-button');
-        const mobileDropdownMenu = document.getElementById('mobile-departments-menu');
-        if (mobileDropdownButton && mobileDropdownMenu) {
-            mobileDropdownButton.addEventListener('click', () => mobileDropdownMenu.classList.toggle('hidden'));
-        }
-
-        // Close desktop dropdown when clicking anywhere else on the page
-        document.addEventListener('click', function() {
-            if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
-                dropdownMenu.classList.add('hidden');
-            }
-        });
-    });
-</script>
+<script src="index.js"></script>
 </body>
 </html>
 
