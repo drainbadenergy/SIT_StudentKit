@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chancellor's Message | St. Future's College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Lato', sans-serif; background-color: #ffffff; color: #1f2937; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- HEADER -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3"><img src="img/Sit logo no bg.png" alt="SIT Logo" class="h-10 w-30"><span class="text-xl font-bold tracking-wider text-gray-800 hover:text-red-600 transition-colors font-heading">Symbiosis Institute Of Technology</span></a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
+                <div class="relative" id="departments-dropdown-container">
+                    <button id="departments-dropdown-button" class="text-gray-600 hover:text-red-600 transition-colors flex items-center">Departments<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="departments-dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-10">
+                        <a href="chancellor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">Director's Message</a><a href="students.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From Our Students</a><a href="creators.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">From The Creators</a>
+                    </div>
+                </div>
+                <a href="essentials.html" class="text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-800">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t border-gray-200">
+             <a href="index.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Home</a>
+             <div>
+                <button id="mobile-departments-button" class="w-full text-left py-2 text-gray-600 hover:text-red-600 transition-colors flex justify-between items-center">Departments<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                <div id="mobile-departments-menu" class="pl-4 hidden">
+                    <a href="chancellor.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Director's Message</a><a href="students.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From Our Students</a><a href="creators.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From The Creators</a>
+                </div>
+             </div>
+             <a href="essentials.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="bg-gray-50 pt-24">
+        <section class="py-20 px-4">
+            <div class="container mx-auto max-w-4xl bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden">
+                <!-- Photo -->
+                <img src="img/Dr. SB Mujumdar.JPG" alt="Message from the Chancellor" class="w-full h-128 object-cover">
+                <div class="p-8 md:p-12">
+                    <h1 class="text-4xl font-bold text-red-600 mb-4 text-center font-heading">A Message from the Chancellor</h1>
+                    <div class="text-left text-lg text-gray-700 space-y-6 leading-relaxed mt-8">
+                        <h2 style="text-align: center;">Welcome to Symbiosis International (Deemed University)!</h2>
+                        <br>
+                        <p style="text-align: justify;">
+                            The University is part of the larger Symbiosis family, which is built on the core ideal of Vasudhaiv Kutumbakam—the world is one family.
+                        </p>
+
+                        <p style="text-align: justify;">
+                            The University stands at the frontiers of global innovation in academics as well as all the other components that make education whole.
+                            I invite you to peruse the extensive range of resources and opportunities that we offer to all the members of the University.
+                            From classrooms to wellness centres, the amenities are both plenty and first-rate. Most important of all, the teaching and non-teaching staff at the University combine in them the calibre and culture to help students fulfil their higher education goals.
+
+                        </p>
+
+                        <p style="text-align: justify;">
+                            At Symbiosis, we are keenly aware of the enormous responsibility that a higher education institution must bear.
+                            Besides imparting knowledge and know-how of the subject of choice,
+                            the institution must prepare the student to thrive in the career of his choice and contribute to the good of the global citizenry.
+                        </p>
+
+                        <p style="text-align: justify;">
+                            The University makes every effort to live up to its institutional mission of internationalization.
+                            A quick tour of our campuses will confirm that our reputation of being an institution of international standing is well-earned. We take great pride in hosting students from eighty-five countries.
+                            The vision of internationalization finds expression at the University all the way from pedagogical practices to cultural activities.
+                        </p>
+
+                        <p style="text-align: justify;">
+                            I hope that you will take the time to learn more about the University and be inspired to join hands.
+                        </p>
+
+                        <br>
+                        <p style="text-align: left;">
+                            <strong>Warm regards,</strong><br>
+                            <strong> Dr. S.B. Mujumdar </strong><br>
+                            <strong>Chancellor</strong><br>
+                            <strong>Symbiosis International University </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-menu">
+                <a href="https://www.linkedin.com/school/sitpune.edu.in/" class="footer-link">LinkedIn</a>
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="https://www.sitpune.edu.in/" class="footer-link">SIT-P</a>
+                <a href="about.us.html" class="footer-link">About Us</a>
+            </div>
+            <div class="copyright-text">
+                Student Kit 2025 | Created With Love ❤️ Harman Ayush Jalaj Gauri
+            </div>
+        </div>
+    </footer>
+
+</script>
+</body>
+</html>
+
