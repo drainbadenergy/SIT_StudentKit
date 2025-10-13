@@ -13,6 +13,13 @@
     <style>
         body { font-family: 'Lato', sans-serif; background-color: #ffffff; color: #1f2937; }
         h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
+
+        /* Styles for the active filter button */
+        .filter-btn.active {
+            background-color: #dc2626; /* red-600 */
+            color: white;
+            border-color: #dc2626; /* red-600 */
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -35,10 +42,10 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t border-gray-200">
              <a href="index.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Home</a>
              <div>
-                <button id="mobile-departments-button" class="w-full text-left py-2 text-gray-600 hover:text-red-600 transition-colors flex justify-between items-center">Departments<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                <div id="mobile-departments-menu" class="pl-4 hidden">
-                    <a href="chancellor.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Director's Message</a><a href="students.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From Our Students</a><a href="creators.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From The Creators</a>
-                </div>
+                 <button id="mobile-departments-button" class="w-full text-left py-2 text-gray-600 hover:text-red-600 transition-colors flex justify-between items-center">Messages<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                 <div id="mobile-departments-menu" class="pl-4 hidden">
+                     <a href="chancellor.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Chancellor's Message</a><a href="director.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">Director's Message</a><a href="students.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From Our Students</a><a href="creators.html" class="block py-2 text-sm text-gray-600 hover:text-red-600">From The Creators</a>
+                 </div>
              </div>
              <a href="essentials.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Student Essentials</a><a href="gallery.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Gallery</a><a href="directions.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Directions</a><a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600 transition-colors">Contact Us</a>
         </div>
@@ -50,19 +57,32 @@
                 <img src="img/students.jpg" alt="Message from the Students" class="w-full h-64 object-cover">
                 <div class="p-8 md:p-12">
                     <h1 class="text-4xl font-bold text-red-600 mb-4 text-center font-heading">From the Heart of Our Community</h1>
-                    <div class="text-left text-lg text-gray-700 space-y-6 leading-relaxed mt-8">
-                        <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"If you’re reading this, all I have to say is, this is your time to try everything. Do whatever you want to, make mistakes, learn, and grow. But remember to respect others, show up for them, and never lose your values.
-                            College is about growing up while still nurturing your inner child. All the best for all your endeavors." - Mitiksha Paliwal, Third Year Student</blockquote>
+                    
+                    <!-- FILTER BUTTONS -->
+                    <div id="filter-buttons" class="flex flex-wrap justify-center gap-2 md:gap-4 my-8">
+                        <button class="filter-btn active text-sm font-semibold py-2 px-4 rounded-full border border-gray-300 transition-colors duration-200" data-filter="all">All Years</button>
+                        <button class="filter-btn text-sm font-semibold py-2 px-4 rounded-full border border-gray-300 transition-colors duration-200 hover:bg-gray-100" data-filter="1">First Year</button>
+                        <button class="filter-btn text-sm font-semibold py-2 px-4 rounded-full border border-gray-300 transition-colors duration-200 hover:bg-gray-100" data-filter="2">Second Year</button>
+                        <button class="filter-btn text-sm font-semibold py-2 px-4 rounded-full border border-gray-300 transition-colors duration-200 hover:bg-gray-100" data-filter="3">Third Year</button>
+                        <button class="filter-btn text-sm font-semibold py-2 px-4 rounded-full border border-gray-300 transition-colors duration-200 hover:bg-gray-100" data-filter="4">Fourth Year</button>
+                    </div>
+
+                    <div id="quotes-container" class="text-left text-lg text-gray-700 space-y-6 leading-relaxed">
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="3">"If you’re reading this, all I have to say is, this is your time to try everything. Do whatever you want to, make mistakes, learn, and grow. But remember to respect others, show up for them, and never lose your values. College is about growing up while still nurturing your inner child. All the best for all your endeavors." - Mitiksha Paliwal, Third Year Student</blockquote>
                         
-                        <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"Dear juniors,
-                            Welcome to SIT! As you embark on this new journey, remember that college is not just about academics — it’s about growth, friendships, and finding your own path. Make the most of every opportunity, stay curious, and never hesitate to reach out for guidance. Wishing you a wonderful and fulfilling year ahead!" -Twinkle, First Year Student</blockquote>
-                        <br>
-                        <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"As your future favorite senior who’s had an amazing run here, here’s my two cents: Put yourself out there, sign up for everything, say yes to more than you think you can handle and you’ll surprise yourself. Also don’t waste college playing a bunch of alter egos; your best insufferable self is more than enough." -Nimita Jestin, Third Year Student</blockquote>
-                        <br>
-                        <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"Hey juniors, welcome! College is this wild mix of chaos and magic... you’ll laugh till you cry, stress over deadlines, and still call it the best time of your life. Don’t wait for the ‘right time’ to start something; every random idea and small step counts. Make friends who push you to be better, learn from the people around you, and most importantly, enjoy the journey without comparing it to anyone else’s. You’re not just here to earn a degree ...you’re here to build stories worth remembering" -Mishti Kinker, Second Year Student</blockquote>
-                        <br>
-                        <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">"Welcome to the Symbiosis family! Dream Big, Stay Curious, and make every moment count. "  - Jay Vyanel Fadonougbo, Third Year Student</blockquote>
-                        <br>
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="1">"Dear juniors, Welcome to SIT! As you embark on this new journey, remember that college is not just about academics — it’s about growth, friendships, and finding your own path. Make the most of every opportunity, stay curious, and never hesitate to reach out for guidance. Wishing you a wonderful and fulfilling year ahead!" -Twinkle, First Year Student</blockquote>
+                        
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="3">"As your future favorite senior who’s had an amazing run here, here’s my two cents: Put yourself out there, sign up for everything, say yes to more than you think you can handle and you’ll surprise yourself. Also don’t waste college playing a bunch of alter egos; your best insufferable self is more than enough." -Nimita Jestin, Third Year Student</blockquote>
+                        
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="2">"Hey juniors, welcome! College is this wild mix of chaos and magic... you’ll laugh till you cry, stress over deadlines, and still call it the best time of your life. Don’t wait for the ‘right time’ to start something; every random idea and small step counts. Make friends who push you to be better, learn from the people around you, and most importantly, enjoy the journey without comparing it to anyone else’s. You’re not just here to earn a degree ...you’re here to build stories worth remembering" -Mishti Kinker, Second Year Student</blockquote>
+                        
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="3">"Hey juniors, welcome! College is this wild mix of chaos, fun, stress, and some of the best memories you'll ever make.explore, make friends, join clubs, ask for help when you need it, and take every chance to learn something new. trust yourself, and you'll enjoy every bit of this journey" - Rithikaa Redde, Third Year Student</blockquote>
+                        
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="3">"Hey juniors, Welcome to college! You’re about to start one of the best chapters of your life.Don't rush to figure everything out, just explore, make memories, and enjoy the chaos that comes with it. We've all been there, and trust us, it's worth it" -Om Ghule, Third Year Student</blockquote>
+                        
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="3">"Welcome to the Symbiosis family! Dream Big, Stay Curious, and make every moment count. " - Jay Vyanel Fadonougbo, Third Year Student</blockquote>
+
+                        <blockquote class="student-quote border-l-4 border-red-500 pl-4 italic text-gray-600" data-year="4">"As you stand at the beginning of this journey, it all seems like a mountain to climb. But looking back from my final year, it's a journey of incredible growth. Cherish the late-night study sessions, the friendships, and the challenges. They shape you more than the grades ever will. Good luck!" - Pramit Sharma, Fourth Year Student</blockquote>
                     </div>
                 </div>
             </div>
@@ -83,7 +103,61 @@
             </div>
         </div>
     </footer>
-<script src="index.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Header Navigation and Dropdown Logic ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    const dropdownButton = document.getElementById('departments-dropdown-button');
+    const dropdownMenu = document.getElementById('departments-dropdown-menu');
+    if (dropdownButton && dropdownMenu) {
+        dropdownButton.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+    }
+
+    const mobileDropdownButton = document.getElementById('mobile-departments-button');
+    const mobileDropdownMenu = document.getElementById('mobile-departments-menu');
+    if (mobileDropdownButton && mobileDropdownMenu) {
+        mobileDropdownButton.addEventListener('click', () => mobileDropdownMenu.classList.toggle('hidden'));
+    }
+
+    document.addEventListener('click', function() {
+        if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+
+    // --- Student Quote Filter Logic ---
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const quotes = document.querySelectorAll('.student-quote');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button style
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            // Show or hide quotes based on filter
+            quotes.forEach(quote => {
+                const quoteYear = quote.getAttribute('data-year');
+                if (filterValue === 'all' || filterValue === quoteYear) {
+                    quote.style.display = 'block';
+                } else {
+                    quote.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>
 
