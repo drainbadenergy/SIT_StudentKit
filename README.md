@@ -50,8 +50,8 @@ This project aims to create a unified portal that provides structured, verified,
 
 | Name | Role | Department |
 |------|------|-------------|
-| Harman | Developer / Designer |Computer Science Engineering Student ] |
-| Ayush | Developer | Computer Science Engineering Student ] |
+| Harman | Developer / Designer |Computer Science Engineering Student |
+| Ayush | Developer | Computer Science Engineering Student  |
 | Jalaj  |Research | Computer Science Engineering Student |
 |Gauri | Documentation | Computer Science Engineering Student |
 
