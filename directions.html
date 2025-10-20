@@ -13,10 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="footer.css">
     <style>
-        /* Custom styles to ensure consistency */
         body { font-family: 'Lato', sans-serif; }
         .font-heading { font-family: 'Poppins', sans-serif; }
-        /* Style for the map iframe to be responsive */
         .map-container iframe {
             position: absolute;
             top: 0;
@@ -26,7 +24,7 @@
         }
         .map-container {
             position: relative;
-            padding-bottom: 75%; /* 4:3 aspect ratio */
+            padding-bottom: 75%; 
             height: 0;
             overflow: hidden;
         }
@@ -34,7 +32,6 @@
 </head>
 <body class="text-gray-800 bg-gray-50">
 
-    <!-- HEADER: This is now consistent with your main page -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
@@ -88,10 +85,8 @@
             <div class="container mx-auto max-w-6xl">
                 <h1 class="text-4xl font-bold text-center text-gray-900 font-heading mb-12">Find Your Way to Us</h1>
                 
-                <!-- Main layout container for map and address -->
                 <div class="bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden md:flex">
                     
-                    <!-- Map Container -->
                     <div class="w-full md:w-3/5">
                          <div class="map-container">
                             <iframe 
@@ -104,7 +99,6 @@
                         </div>
                     </div>
 
-                    <!-- Address Container -->
                     <div class="w-full md:w-2/5 p-8 flex flex-col justify-center">
                         <h2 class="text-2xl font-bold text-red-600 font-heading mb-4">Our Address</h2>
                         <p class="text-lg text-gray-700 leading-relaxed">
@@ -137,4 +131,5 @@
     <script src="index.js"></script>
 </body>
 </html>
+
 
