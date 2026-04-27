@@ -1,6 +1,6 @@
 # 🎓 SIT Student Kit
 
-**SIT Student Kit** is a student-built web platform designed to help incoming students of **Symbiosis Institute of Technology, Pune (SIT Pune)** easily access all essential information about the college — all in one place.
+**SIT Student Kit** is a student-built web platform designed to help incoming students of **Symbiosis Institute of Technology, Pune (SIT Pune)** easily access all essential information about the college, all put in one place.
 
 ## 🚀 Project Overview
 
