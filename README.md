@@ -57,12 +57,5 @@ This project aims to create a unified portal that provides structured, verified,
 
 ---
 
-## 📬 Contact
-
-For feedback or collaboration opportunities, reach out at:  
-📧 **[harmanjss10@gmail.com]**
-
----
-
 ### ⭐ If you like this project, consider giving it a star on GitHub!
 
